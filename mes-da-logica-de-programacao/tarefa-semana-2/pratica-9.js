@@ -1,6 +1,6 @@
 
-let n1 = 10;
-let n2 = 20;
+let n1 = 1000;
+let n2 = 5;
 
 let max = Math.max(n1, n2);
 
