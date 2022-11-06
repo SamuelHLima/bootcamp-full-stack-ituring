@@ -38,12 +38,11 @@ let carros = [{
     placa: "ABC8765"
   }]
 
-  function Maior (lista) {
-    lista.sort(function (X,Y) {
-        return Y.tempoEstimado < Y.tempoEstimado
-        
+  const MaisPerto = (Prox) => {
+    const Tempo = carros.reduce(function(X, Y) {
+        return (X.tempoEstimado < Y.tempoEstimado) ? X: Y
+    
     })
-    console.log(lista.tempoEstimado);  
-  };
-
-  Maior(carros);
+        console.log(`${carros[3].motorista} está a caminho com o carro ${carros[3].veiculo} de placa ${carros[3].placa}. Chega em ${carros[3].tempoEstimado} minutos..`);
+  }
+  MaisPerto();
